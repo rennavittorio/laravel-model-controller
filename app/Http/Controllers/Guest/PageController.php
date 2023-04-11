@@ -11,8 +11,7 @@ class PageController extends Controller
     public function homepage()
     {
 
-        $movies = Movie::where('id', '>=', 0)
-            ->orderBy('vote', 'desc')
+        $movies = Movie::orderBy('vote', 'desc')
             ->get();
         // dd($movies);
 
